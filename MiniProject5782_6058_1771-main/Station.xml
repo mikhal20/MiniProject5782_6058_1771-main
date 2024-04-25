@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<ArrayOfStation xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Station>
+    <ID>8576383</ID>
+    <Name>Central Station</Name>
+    <Latitude>31.788588</Latitude>
+    <Longitude>35.202459</Longitude>
+    <ChargeSlots>41</ChargeSlots>
+  </Station>
+  <Station>
+    <ID>3961263</ID>
+    <Name>Malcha Mall</Name>
+    <Latitude>31.750822</Latitude>
+    <Longitude>35.186824</Longitude>
+    <ChargeSlots>28</ChargeSlots>
+  </Station>
+</ArrayOfStation>

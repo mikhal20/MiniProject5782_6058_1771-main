@@ -1,0 +1,39 @@
+﻿<Window x:Class="PL.SignWindow" WindowStartupLocation="CenterScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PL"
+        mc:Ignorable="d"
+        Title="SignWindow" Height="470" Width="800" HorizontalAlignment="Center" VerticalAlignment="Center">
+    <Grid>
+        <Grid x:Name="DirectorGrid" Margin="410,20,50,100" Background="#FFCBE7FC">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="54*"/>
+                <RowDefinition Height="23*"/>
+                <RowDefinition Height="34*"/>
+            </Grid.RowDefinitions>
+
+            <Label  x:Name="labelEmployee"  Content="Employee / Director" Background="{x:Null}" FontSize="30" FontWeight="DemiBold"  HorizontalAlignment="Center" Grid.Row="0" Margin="0,39,0,10" Grid.RowSpan="3" />
+            <TextBox Name="EmployeeId" Text="Enter Id" MaxLength="9" HorizontalAlignment="Center" VerticalAlignment="Top" Height="50" Width="150" Grid.Row="0" Margin="0,150,0,0" TextChanged="EmployeeId_TextChanged" Foreground="Black"  Background="{x:Null}" BorderThickness="2,2,2,2" FontSize="22" TextAlignment="Center" GotFocus="TextBox_GotFocus" BorderBrush="Gray" PreviewTextInput="NumbersOnly" Grid.RowSpan="2"/>
+            <Button x:Name="BtnSignEmployee" Content="Sign In" HorizontalAlignment="Center" VerticalAlignment="Top" Height="30" Width="90" FontSize="12" MouseDoubleClick="BtnSignEmployee_Click" Background="{x:Null}" BorderThickness="2,2,2,2" BorderBrush="Gray" Click="BtnSignEmployee_Click" Margin="0,64,0,0" Grid.RowSpan="2"  IsEnabled="{Binding ElementName=EmployeeId, Path=Text.Length, Mode=OneWay}" Grid.Row="1" />
+
+        </Grid>
+
+        <Grid x:Name="ClientGrid" Margin="50,20,410,100" Background="#FFCBE7FC">
+            <Label  x:Name="labelClient"  Content="Client" Background="{x:Null}" FontSize="30" FontWeight="DemiBold"  HorizontalAlignment="Center" Grid.Row="0" HorizontalContentAlignment="Left" VerticalContentAlignment="Top" Margin="0,39,0,10" Grid.RowSpan="2" />
+            <TextBox Name="ClientId" Text="Enter Id" MaxLength="9" HorizontalAlignment="Center" VerticalAlignment="top" Height="50" Width="150" Grid.Row="0" Margin="0,150,0,0" TextChanged="ClientId_TextChanged" Foreground="Black" GotFocus="TextBox_GotFocus" Background="{x:Null}" BorderThickness="2,2,2,2" FontSize="22" TextAlignment="Center" BorderBrush="Gray" PreviewTextInput="NumbersOnly"  />
+            <Button x:Name="BtnSignClient" Content="Sign In" HorizontalAlignment="Center" VerticalAlignment="Top" Height="30" Width="90" FontSize="12" MouseDoubleClick="BtnSignClient_Click" Background="{x:Null}" BorderThickness="2,2,2,2" Margin="0,226,0,0" BorderBrush="Gray" IsEnabled="{Binding ElementName=ClientId, Path=Text.Length, Mode=OneWay}" />
+
+        </Grid>
+
+        <Grid x:Name="SignUpGrid" Margin="50,360,50,20" Background="#FFCBE7FC">
+            <Button x:Name="BtnSignUp" Content="Sign Up" HorizontalAlignment="Left" VerticalAlignment="Center" Height="30" Width="90" FontSize="12" MouseDoubleClick="BtnSignUp_Click" Background="{x:Null}" BorderThickness="2,2,2,2"  BorderBrush="Gray" Margin="249,0,0,0" />
+            <Button x:Name="Close" Content="Close"  VerticalAlignment="Center" HorizontalAlignment="Left" Height="30" Width="90" MouseDoubleClick="Close_Click" FontSize="12"  Background="{x:Null}" BorderThickness="2,2,2,2"  BorderBrush="Gray" Margin="344,0,0,0" Click="Close_Click"/>
+        </Grid>
+
+        <Ellipse Height="70"  Stroke="Black" VerticalAlignment="Top" HorizontalAlignment="Center" Width="70" StrokeThickness="2" Fill="White" Margin="0,137,0,0"   />
+        <TextBlock Text="Or" VerticalAlignment="Top" HorizontalAlignment="Center" FontSize="20"  FontWeight="DemiBold" Margin="0,159,0,0"/>
+
+    </Grid>
+</Window>

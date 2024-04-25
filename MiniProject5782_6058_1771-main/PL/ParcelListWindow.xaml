@@ -1,0 +1,44 @@
+﻿<Window x:Class="PL.ParcelListWindow" WindowStartupLocation="CenterScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PL"
+        mc:Ignorable="d"
+        Title="ParcelListWindow" Height="450" Width="800">
+
+    <Grid Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="400*"/>
+        </Grid.RowDefinitions>
+        <Grid Name="UpGrid" HorizontalAlignment="Stretch" Height="auto" Grid.Row="0" Width="auto" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="67*"/>
+                <ColumnDefinition Width="67*"/>
+                <ColumnDefinition Width="67*"/>
+                <ColumnDefinition Width="67*"/>
+                <ColumnDefinition Width="67*"/>
+                <ColumnDefinition Width="67*"/>
+            </Grid.ColumnDefinitions >
+
+            <ComboBox Name="ComboStatusSelector" Grid.Column="0" ToolTip="Choose a Status" SelectionChanged="ComboStatusSelector_SelectionChanged"  />
+            <ComboBox Name="ComboPrioritiesSelector" Grid.Row="0" ToolTip="Choose a priority" SelectionChanged="ComboPrioritiesSelector_SelectionChanged" Margin="133,0,133,0" Grid.ColumnSpan="3" />
+            <ComboBox Name="ComboWeightSelector" Grid.Row="0" Grid.Column="2" ToolTip="Choose a Weight" SelectionChanged="ComboWeightSelector_SelectionChanged" />
+            <Button x:Name="BtnAddParcel" Content="Add a Parcel"  Grid.Column="3" MouseDoubleClick="BtnAddParcel_Click" FontSize="16" />
+            <Button x:Name="Close"       Content="Close"        Grid.Column="5" MouseDoubleClick="Close_Click"  FontSize="16" />
+            <Button Content="Group by Sender" Grid.Column="4"  MouseDoubleClick="GroupeSender_Click" FontSize="16" />
+
+
+        </Grid>
+        <ListView 
+            Grid.Row="1" ItemsSource="{Binding Parcels}" x:Name="ParcelsListView" Margin="0,0,0,0" SelectionChanged="ParcelsListView_SelectionChanged" MouseDoubleClick="ParcelListView_doubleClick" SelectionMode="Extended" Background="#FFCBE7FC" BorderThickness="2,2,2,2"  >
+            <ListView.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkColorKey}}"/>
+            </ListView.BorderBrush>
+        </ListView>
+        <Button x:Name="refreshWindow" Content="↺" FontSize="30" MouseDoubleClick="refreshWindow_Click" Margin="719,10,10,295"  Background="{x:Null}" BorderBrush="{x:Null}" Grid.Row="1"  />
+
+    </Grid>
+
+</Window>

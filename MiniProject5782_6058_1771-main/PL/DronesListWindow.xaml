@@ -1,0 +1,40 @@
+﻿<Window x:Class="PL.DronesListWindow" WindowStartupLocation="CenterScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PL"
+        mc:Ignorable="d"
+        Title="DronesListWindow" Height="450" Width="800">
+    <Grid Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="400*"/>
+        </Grid.RowDefinitions>
+        <Grid Name="UpGrid" HorizontalAlignment="Stretch" Height="auto" Grid.Row="0" Width="auto" >
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions >
+
+            <ComboBox Name="ComboStatusSelector" Grid.Column="1" ToolTip="Choose a Status" SelectionChanged="ComboStatusSelector_SelectionChanged"  />
+            <ComboBox Name="ComboWeightSelector" Grid.Row="0"  Grid.Column="0" ToolTip="Choose a Weight" SelectionChanged="ComboWeightSelector_SelectionChanged" />
+
+            <Button x:Name="BtnAddDrone" Content="Add a drone"  Grid.Column="2"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MouseDoubleClick="BtnAddDrone_Click" FontSize="16" d:IsLocked="True"/>
+            <Button x:Name="Close"       Content="Close"        Grid.Column="4"  VerticalAlignment="Stretch" HorizontalAlignment="Stretch" MouseDoubleClick="Close_Click"      FontSize="16" d:IsLocked="True"/>
+            <Button Content="Group By Status" Grid.Column="3" VerticalAlignment="Stretch" HorizontalAlignment="Stretch"  MouseDoubleClick="GroupeStatus_Click" FontSize="16"/>
+        </Grid>
+       
+            <ListView 
+            Grid.Row="1" x:Name="DronesListView" ItemsSource="{Binding Drones}" Margin="0,0,0,0" SelectionChanged="DronesListView_SelectionChanged" MouseDoubleClick="DronesListView_MouseDoubleClick" SelectionMode="Extended" Background="#FFCBE7FC" BorderThickness="2,2,2,2"  >
+            <ListView.BorderBrush>
+                <SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ControlDarkColorKey}}"/>
+            </ListView.BorderBrush>
+        </ListView>
+        <Button x:Name="refreshWindow" Content="↺" FontSize="30" MouseDoubleClick="refreshWindow_Click" Margin="707,15,22,292" Background="{x:Null}" BorderBrush="{x:Null}" Grid.Row="1" />
+   
+    </Grid>
+</Window>

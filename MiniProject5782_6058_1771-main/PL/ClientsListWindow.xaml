@@ -1,0 +1,30 @@
+﻿<Window x:Class="PL.ClientsListWindow" WindowStartupLocation="CenterScreen"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:PL"
+        mc:Ignorable="d"
+        Title="ClientsListWindow" Height="450" Width="800">
+    <Grid Name="MainGrid">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50*"/>
+            <RowDefinition Height="400*"/>
+        </Grid.RowDefinitions>
+        <Grid Name="UpGrid" HorizontalAlignment="Stretch" Height="auto" VerticalAlignment="Stretch" Width="auto">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="267*"/>
+                <ColumnDefinition Width="267*"/>
+            </Grid.ColumnDefinitions >
+
+            <Button x:Name="BtnAddClient" Content="Add a client"  Grid.Column="0" MouseDoubleClick="BtnAddClient_Click" FontSize="16" Click="BtnAddClient_Click"/>
+            <Button x:Name="Close"         Content="Close"          Grid.Column="1" MouseDoubleClick="Close_Click" FontSize="16"  />
+
+        </Grid>
+        <ListView Grid.Row="1" ItemsSource="{Binding Clients}" x:Name="ClientsListView" Margin="0,0,0,0" SelectionChanged="ClientsListView_SelectionChanged" MouseDoubleClick="ClientsList_MouseDoubleClick" SelectionMode="Extended" Background="#FFCBE7FC" BorderThickness="2,2,2,2"  >
+        </ListView>
+        <Button x:Name="Refresh"  Content="↺" FontSize="30" MouseDoubleClick="Refresh_Click" Margin="710,59,30,457" Background="{x:Null}" BorderBrush="{x:Null}" Width="60" Click="Refresh_Click" Grid.RowSpan="2"  />
+
+
+    </Grid>
+</Window>

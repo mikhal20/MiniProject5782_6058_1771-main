@@ -1,0 +1,73 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ArrayOfClient xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Client>
+    <ID>779080736</ID>
+    <Name> Mikhal Levy </Name>
+    <Phone>0575116200</Phone>
+    <Latitude>31.769959</Latitude>
+    <Longitude>35.184812</Longitude>
+  </Client>
+  <Client>
+    <ID>396059264</ID>
+    <Name> Shaili Benloulou </Name>
+    <Phone>0526600553</Phone>
+    <Latitude>31.784591</Latitude>
+    <Longitude>35.173452</Longitude>
+  </Client>
+  <Client>
+    <ID>637058205</ID>
+    <Name> Talia Azoulay</Name>
+    <Phone>0532591353</Phone>
+    <Latitude>31.730643</Latitude>
+    <Longitude>35.184062</Longitude>
+  </Client>
+  <Client>
+    <ID>179221046</ID>
+    <Name> Moti Cohen </Name>
+    <Phone>0502024001</Phone>
+    <Latitude>31.763177</Latitude>
+    <Longitude>35.196806</Longitude>
+  </Client>
+  <Client>
+    <ID>681973668</ID>
+    <Name>Yoel Ivgi </Name>
+    <Phone>0552353158</Phone>
+    <Latitude>31.809853</Latitude>
+    <Longitude>35.19655</Longitude>
+  </Client>
+  <Client>
+    <ID>534994512</ID>
+    <Name>Reouven Bensimon</Name>
+    <Phone>0508862481</Phone>
+    <Latitude>31.762155</Latitude>
+    <Longitude>35.175401</Longitude>
+  </Client>
+  <Client>
+    <ID>908850639</ID>
+    <Name>Eliezer Daby</Name>
+    <Phone>0521140376</Phone>
+    <Latitude>31.752997</Latitude>
+    <Longitude>35.149562</Longitude>
+  </Client>
+  <Client>
+    <ID>191493365</ID>
+    <Name>Chyrel Barouh</Name>
+    <Phone>0542887449</Phone>
+    <Latitude>31.75298</Latitude>
+    <Longitude>35.221041</Longitude>
+  </Client>
+  <Client>
+    <ID>406220303</ID>
+    <Name>David Dayan</Name>
+    <Phone>0559024497</Phone>
+    <Latitude>31.781257</Latitude>
+    <Longitude>35.206477</Longitude>
+  </Client>
+  <Client>
+    <ID>468689842</ID>
+    <Name>Yossef Amar</Name>
+    <Phone>0561240930</Phone>
+    <Latitude>31.774441</Latitude>
+    <Longitude>35.213439</Longitude>
+  </Client>
+</ArrayOfClient>
